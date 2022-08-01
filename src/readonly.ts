@@ -22,4 +22,4 @@ const ana = new Pessoa("Ana Carol", 29);
 
 console.log("ID DA ANA: ", ana.id)
 
-// console.log(ana);
+console.log(ana);

@@ -1,6 +1,6 @@
-import { applyMixins } from './mixin/applyMixin';
+// import { applyMixins } from './mixin/applyMixin';
 
-class Automovel{
+class Automovel {
 
   ligar(): void {
     console.log("AUTOMOVEL LIGADO COM SUCESSO!")
@@ -12,28 +12,28 @@ class Automovel{
 
 }
 
-class Especificacao{
+class Especificacao {
   descricao: string;
 
-  constructor(descricao: string){
+  constructor(descricao: string) {
     this.descricao = descricao;
   }
 
 }
 
 
-class Carro{
+class Carro {
   nome: string;
 
-  constructor(nome: string){
+  constructor(nome: string) {
     this.nome = nome;
   }
 
 }
 
-interface Carro extends Automovel, Especificacao{ }
+interface Carro extends Automovel, Especificacao { }
 
-applyMixins(Carro, [Automovel, Especificacao])
+// applyMixins(Carro, [Automovel, Especificacao])
 
 const gol = new Carro("Gol 1.6");
 

@@ -1,3 +1,6 @@
+/* Para que serve uma classe abstrata?
+Uma classe abstrata é uma classe que serve de modelo para outras classes. Ela sempre será uma superclasse genérica, e suas subclasses serão mais específicas. Além disso, ela não pode ser instanciada e pode conter ou não métodos abstratos, podendo ser implementados nas classes descendentes. */
+
 
 type DadosConta = {
   nome: string;
@@ -5,17 +8,17 @@ type DadosConta = {
   endereco: string;
 }
 
-abstract class ContaBanco{
+abstract class ContaBanco {
 
   abstract abrirConta(dados: DadosConta): boolean;
 
 }
 
-class PessoaFisica extends ContaBanco{
+class PessoaFisica extends ContaBanco {
   abrirConta(dados: DadosConta): boolean {
 
     console.log("=========")
-    console.log(`Nova conta P.Fisica criada com sucesso ${dados.nome}`)  
+    console.log(`Nova conta P.Fisica criada com sucesso ${dados.nome}`)
     console.log("=========")
 
     return true;
@@ -23,11 +26,11 @@ class PessoaFisica extends ContaBanco{
 }
 
 
-class PessoaJuridica extends ContaBanco{
+class PessoaJuridica extends ContaBanco {
   abrirConta(dados: DadosConta): boolean {
 
     console.log("=========")
-    console.log(`Nova conta P.Juridica criada com sucesso ${dados.nome}`)  
+    console.log(`Nova conta P.Juridica criada com sucesso ${dados.nome}`)
     console.log("=========")
 
     return true;
